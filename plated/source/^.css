@@ -2,11 +2,12 @@
 
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}article,footer,header,main,menu,nav,section,summary{display:block;}
 
-html    {font-size:18px; scroll-behavior:smooth;}
+html    {font-size:18px; scroll-behavior:smooth; scroll-padding-top:100px;}
 body	{background:#f7f4fd; font-family:sans-serif; font-size:18px; font-weight:400; line-height:normal; color:#111; max-width:100%; overflow-x:hidden; padding:0; margin:0;}
 h1		{font-size:1.5em; font-weight:normal;}
 h2		{font-size:1.5em; font-weight:normal;}
 h3      {font-size:1.0em; font-weight:500; color:#111; letter-spacing:15px; text-transform:uppercase;}
+h4      {font-size:0.8em; font-style:italic; color:#111; letter-spacing:15px; text-transform:uppercase; margin-top:1em; margin-bottom:1em;}
 b		{font-weight:bold; font-weight:700;}
 i		{font-style:italic;}
 a		{color:#111; text-decoration:none; transition:all 0.5s ease-out;}
@@ -25,11 +26,13 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .row            {max-width:1170px; margin-right:auto; margin-left:auto; display:flex; flex-flow:row wrap;}
 .head_content   {position:sticky; top:0; background-color:#f7f4fd; z-index:3;}
 .main_content   {min-height:400px; padding-top:20px; padding-bottom:20px;}
-.foot_content   {border-top:1px solid #918170;}
+.foot_content   {border-top:1px solid #111;}
+.link_wrap		{padding-top:2em; width:100%;}
+.cont_wrap		{margin-bottom:2em;}
 .nav_wrap,
 .cc_wrap,
 .funder_wrap    {display:flex; align-items:center; justify-content:space-between; width:100%;}
-.cc_wrap        {align-items:baseline; border-top:1px solid #918170; padding:20px 0 40px 0;}
+.cc_wrap        {align-items:baseline; border-top:1px solid #111; padding:20px 0 40px 0;}
 .funder_wrap    {align-items:center; padding:20px 0;}
 .nav_content    {display:flex; padding-left:30px; align-items: baseline; justify-content:space-between; width:40%;}
 .logo           {height:100px; align-items:center; justify-content:center; display:flex;}
@@ -38,7 +41,9 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .logo a         {display:flex; align-items:center;}
 .logo a img     {width:50px; height:50px; padding-right:10px;}
 
-.about_wrap     {margin-top:1.5em; margin-bottom:1.5em;}
+.title			{margin:1em 0; border-bottom:1px solid #111; padding-bottom:1em;}
+
+.about_wrap     {margin-top:1.5em; margin-bottom:1.5em; width:100%; background:#efe9f9; padding:1.5em;}
 .about_text     {font-size:18px; padding-top:20px; line-height:22px;}
 .about_text b   {font-weight:500;}
 .about_text_title   {font-weight:300; margin-bottom:20px; font-style:italic;}
@@ -49,7 +54,7 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .mob_logo       {position:fixed; top:0; left:1.5rem; z-index:6; height:80px;}
 .mob_logo a img {height:30px;}
 .mob_link       {font-size:1.5rem; margin-bottom:1.5rem;}
-.mob_about      {font-size:1.0rem; margin-bottom:1.0rem; border-top:1px solid #918170; border-bottom:1px solid #918170; padding:1.0rem 0;}
+.mob_about      {font-size:1.0rem; margin-bottom:1.0rem; border-top:1px solid #111; border-bottom:1px solid #111; padding:1.0rem 0;}
 .mob_cc_wrap    {margin-top:2.5rem;}
 .mob_cc         {font-size:0.8rem; line-height:initial; margin-top:0.3rem;}
 
@@ -76,7 +81,7 @@ html            {font-size:18px;}
 body            {padding:0.5em 1.5em; font-size:1.0rem;}
 .head_content   {display:none;}
 .mob_content    {display:block;}
-.main_content   {padding-top:40px;}
+.main_content   {padding-top:3em;}
 h2              {font-size:1.2rem; line-height:inherit;}
 .about_text     {font-size:1.0rem; line-height:inherit;}
 h1				{font-size:1.5rem; line-height:inherit;}
@@ -85,7 +90,7 @@ h1				{font-size:1.5rem; line-height:inherit;}
 .funder_wrap    {flex-flow:column;}
 .funder_img     {width:initial;}
 .funder_text    {padding:20px 0 0 0;}
-
+.cont_wrap p	{font-size:0.85rem;}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -96,4 +101,5 @@ h1, h2			{font-size:1.5rem; line-height:inherit;}
 .cc_text        {width:85%;}
 .funder_wrap    {flex-flow:wrap; justify-content:left;}
 .funder_text    {padding:20px 0 0 0;}
+.cont_wrap p	{font-size:0.85rem;}
 }

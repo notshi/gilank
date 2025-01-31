@@ -28,7 +28,7 @@ G  i  l  a  n  k
 #^------------------------------
 #^body trim=ends
 
-<div class="home">You might want to go <a href="{iso_root}index.html">home</a>.</div>
+<div class="home">You might want to go <a href="{_root}index.html">home</a>.</div>
 
 #^header trim=ends
 <header role="menubar" aria-label="Head" class="head_content">
@@ -36,33 +36,13 @@ G  i  l  a  n  k
     <div class="row">
         <div class="nav_wrap">
             <div class="logo">
-				<a href="{root}index.html">
+				<a href="{_root}index.html">
 					<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg"></span>
 				</a>
 			</div>
             <nav aria-label="Main" class="nav_content">
+				<div class="news"><a href="#news">News</a></div>
                 <div class="releases"><a href="#releases">Releases</a></div>
-                <div class="news"><a href="#news">News</a></div>
-                <div class="about"><a href="#about">About</a></div>
-            </nav>
-        </div>
-    </div>
-</header>
-
-#^header1 trim=ends
-{mob_header}
-<header role="menubar" aria-label="Mobile Head" class="head_content">
-	<a class="skip-link" href='#main'>Skip to content</a>
-    <div class="row">
-        <div class="nav_wrap">
-            <div class="logo">
-				<a href="{root}index.html">
-					<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg"></span>
-				</a>
-			</div>
-            <nav aria-label="Mobile Main" class="nav_content">
-
-#^header2 trim=ends
                 <div class="about"><a href="#about">About</a></div>
             </nav>
         </div>
@@ -73,7 +53,7 @@ G  i  l  a  n  k
 <header class="mob_content">
 <div id="mob_nav">
     <div class="logo mob_logo">
-		<a href="{root}index.html">
+		<a href="{_root}index.html">
 			<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg" width="38" height="38"></span>
 		</a>
 	</div>
@@ -87,8 +67,8 @@ G  i  l  a  n  k
     <nav aria-label="Mobile Main">
         <ul class="mob_nav_content">
         <li><div class="mob_link"><a href="{_root}index.html">Home</a></div></li>
-        <li><div class="mob_link"><a href="#releases">Releases</a></div></li>
-        <li><div class="mob_link"><a href="#news">News</a></div></li>
+        <li><div class="mob_link"><a href="{_root}index.html#news">News</a></div></li>
+        <li><div class="mob_link"><a href="{_root}index.html#releases">Releases</a></div></li>
         <li>
 			<div class="mob_cc_wrap">
 				<div class="mob_about">{about_text}</div>
@@ -101,7 +81,7 @@ G  i  l  a  n  k
 </header>
 
 #^about_text trim=ends form=markdown
-Gilank is a duo of Bradford-based experimental electro-acoustic musicians, *Alice Gilmour* and *shi Blank*.
+**Gilank** is a duo of Bradford-based experimental electro-acoustic musicians, *Alice Gilmour* and *shi Blank*.
 
 
 They work with an array of loopers, pedals, synths, MIDI controllers, and acoustic instruments.
