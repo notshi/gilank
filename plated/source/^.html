@@ -2,8 +2,12 @@
 #^------------------------------
 #^html trim=ends
 <!DOCTYPE html>
-<html>
-<head>{head}</head>
+<html lang="en">
+<head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Gilank is a duo of Bradford-based experimental electro-acoustic musicians, Alice Gilmour and shi Blank. They work with an array of loopers, pedals, synths, MIDI controllers, and acoustic instruments. One person starts, often with a shared thought in mind, the other adds a layer, and so on. Each responds to the other's input in real-time, their interactions shaping the evolving composition.">
+    {head}
+</head>
 <body>{body}</body>
 </html>
 
@@ -19,9 +23,108 @@
 #^------------------------------
 #^title trim=ends
 
-Title is missing.
+G  i  l  a  n  k
 
 #^------------------------------
 #^body trim=ends
 
-Body is missing.
+<div class="home">You might want to go <a href="{iso_root}index.html">home</a>.</div>
+
+#^header trim=ends
+<header role="menubar" aria-label="Head" class="head_content">
+	<a class="skip-link" href='#main'>Skip to content</a>
+    <div class="row">
+        <div class="nav_wrap">
+            <div class="logo">
+				<a href="{root}index.html">
+					<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg"></span>
+				</a>
+			</div>
+            <nav aria-label="Main" class="nav_content">
+                <div class="releases"><a href="#releases">Releases</a></div>
+                <div class="news"><a href="#news">News</a></div>
+                <div class="about"><a href="#about">About</a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+#^header1 trim=ends
+{mob_header}
+<header role="menubar" aria-label="Mobile Head" class="head_content">
+	<a class="skip-link" href='#main'>Skip to content</a>
+    <div class="row">
+        <div class="nav_wrap">
+            <div class="logo">
+				<a href="{root}index.html">
+					<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg"></span>
+				</a>
+			</div>
+            <nav aria-label="Mobile Main" class="nav_content">
+
+#^header2 trim=ends
+                <div class="about"><a href="#about">About</a></div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+#^mob_header trim=ends
+<header class="mob_content">
+<div id="mob_nav">
+    <div class="logo mob_logo">
+		<a href="{root}index.html">
+			<span role="img" aria-label="A vector graphic spelled as Gilank"><img alt="A vector graphic spelled as Gilank" src="{_root}data/web_logo.svg" width="38" height="38"></span>
+		</a>
+	</div>
+    <input id="mob_toggle" type="checkbox" />
+    <label for="mob_toggle">
+        <span></span>
+        <span></span>
+        <span class="aria-invisible">Menu navigation</span>
+        <span></span>
+    </label>
+    <nav aria-label="Mobile Main">
+        <ul class="mob_nav_content">
+        <li><div class="mob_link"><a href="{_root}index.html">Home</a></div></li>
+        <li><div class="mob_link"><a href="#releases">Releases</a></div></li>
+        <li><div class="mob_link"><a href="#news">News</a></div></li>
+        <li>
+			<div class="mob_cc_wrap">
+				<div class="mob_about">{about_text}</div>
+				<div class="mob_cc">Email | Bandcamp | Instagram</div>
+			</div>
+        </li>
+        </ul>
+    </nav>
+</div>
+</header>
+
+#^about_text trim=ends form=markdown
+Gilank is a duo of Bradford-based experimental electro-acoustic musicians, *Alice Gilmour* and *shi Blank*.
+
+
+They work with an array of loopers, pedals, synths, MIDI controllers, and acoustic instruments.
+
+One person starts, often with a shared thought in mind, the other adds a layer, and so on.
+
+
+Each responds to the other's input in real-time, their interactions shaping the evolving composition.
+
+#^footer trim=ends
+<footer class="foot_content" id="about">
+    <div class="row">
+        <div class="about_wrap">
+            <div class="about"><h3>About</h3></div>
+            <div class="about_text">
+                {about_text}
+            </div>
+        </div>
+        <div class="cc_wrap">
+            <div class="cc_text">
+                Email | Bandcamp | Instagram
+            </div>
+            <div class="top"><a href="#">Back up</a></div>
+        </div>
+    </div>
+</footer>
