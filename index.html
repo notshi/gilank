@@ -13,7 +13,7 @@ body	{background:#f7f4fd; font-family:sans-serif; font-size:18px; font-weight:40
 h1		{font-size:1.5em; font-weight:normal;}
 h2		{font-size:1.5em; font-weight:normal;}
 h3      {font-size:1.0em; font-weight:500; color:#111; letter-spacing:15px; text-transform:uppercase;}
-h4      {font-size:0.8em; font-style:italic; color:#111; letter-spacing:15px; text-transform:uppercase; margin-top:1em; margin-bottom:1em;}
+h4      {font-size:0.8em; font-style:italic; color:#111; letter-spacing:15px; text-transform:uppercase; margin-top:3em; margin-bottom:2em;}
 b		{font-weight:bold; font-weight:700;}
 i		{font-style:italic;}
 a		{color:#111; text-decoration:none; transition:all 0.5s ease-out;}
@@ -79,7 +79,12 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 #mob_nav input:checked ~ nav {height:100%; transition-delay:0s;}
 #mob_nav input:checked ~ nav > ul > li {opacity:1; transition-delay:0s;}
 
-
+table.tunes		{width:100%;}
+table.tunes	tr	{height:1em;}
+table.tunes th	{color:#666; font-size:14px; padding:0.5em 0 0.5em 0.5em; position:relative;}
+table.tunes th.date	{width:13em;}
+table.tunes th div	{position:absolute; pointer-events:none; border-bottom:1px solid #aaa; width:calc(100% - 1.5625em); bottom:0; left:0.5em;}
+table.tunes td	{vertical-align:top; padding:0.5em 0 0.5em 0.5em;}
 
 
 @media (min-width: 360px) and (max-width: 767.98px) {
@@ -175,11 +180,152 @@ h1, h2			{font-size:1.5rem; line-height:inherit;}
 		<div class="link_wrap" id="releases"><div class="cont_wrap">
 	<div class="title"><h3>releases</h3></div>
 	<h4 id="upcoming">Upcoming</h4>
-<p>??? 2025 - Album with Ozzy Moysey<br>06 - 08 Mar 2025 - A Teaspoon of Shampoo, Theatre in the Mill<br>20 Jun 2025 - Gilank + Hexama, Rumble up the Ryshworth <a href="https://rumbleupbingley.co.uk/events/jun-2025">(link)</a><br>17 May 2025 - The Bradford Progress</p>
+<table class="tunes">
+    <tr>
+        <th class="date">DATE<div></div></th>
+        <th>EVENT<div></div></th>
+        <th>LINK<div></div></th>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>2025</td>
+        <td>Album with Ozzy Moysey</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>06 - 08 Mar 2025</td>
+        <td>A Teaspoon of Shampoo, Theatre in the Mill</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>20 Jun 2025</td>
+        <td>Gilank + Hexama, Rumble up the Ryshworth</td>
+        <td><a href="https://rumbleupbingley.co.uk/events/jun-2025">Tickets</a></td>
+    </tr>
+    <tr>
+        <td>17 May 2025</td>
+        <td>The Bradford Progress</td>
+        <td></td>
+    </tr>
+</table>
+
 <h4 id="current">Current</h4>
-<p>07 Jan 2025 - Night Freight (15:35) link<br>18 Dec 2024 - Suspended in a Sunbeam (09:39) link<br>29 Nov 2024 - There&#39;s a Strange Noise Coming Through the Speakers - Radio Edit (04:52) link<br>29 Nov 2024 - Shiver Training (26:56) link<br>21 Oct 2024 - There&#39;s a Strange Noise Coming Through the Speakers (10:45) link<br>21 Sep 2024 - The Occurrence at Rombalds Moor (13:45) link<br>21 Sep 2024 - Arranging Orchids (15:23) link<br>21 Sep 2024 - Dreaming by Theia (13:42) link<br>21 Sep 2024 - Towards The End (07:53) link<br>02 Sep 2024 - Live at St. George’s Hall (11:41) link<br>28 July 2024 - Gendang Hujan (13:38) link<br>28 July 2024 - Mega-City One (09:17) link<br>26 July 2024 - Rapture (14:52) link<br>26 July 2024 - Stasis Rains (18:22) link<br>23 July 2024 - The Rising (10:56) link<br>14 July 2024 - Temporal Flow (10:07) link</p>
+<table class="tunes">
+    <tr>
+        <th class="date">DATE<div></div></th>
+        <th>RELEASE TITLE<div></div></th>
+        <th>LENGTH<div></div></th>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>07 Jan 2025</td>
+        <td>Night Freight</td>
+        <td>(15:35)</td>
+    </tr>
+    <tr>
+        <td>18 Dec 2024</td>
+        <td>Suspended in a Sunbeam</td>
+        <td>(09:39)</td>
+    </tr>
+    <tr>
+        <td>29 Nov 2024</td>
+        <td>There's a Strange Noise Coming Through the Speakers - Radio Edit</td>
+        <td>(04:52)</td>
+    </tr>
+    <tr>
+        <td>29 Nov 2024</td>
+        <td>Shiver Training</td>
+        <td>(26:56)</td>
+    </tr>
+    <tr>
+        <td>21 Oct 2024</td>
+        <td>There's a Strange Noise Coming Through the Speakers</td>
+        <td>(10:45)</td>
+    </tr>
+    <tr>
+        <td>21 Sep 2024</td>
+        <td>The Occurrence at Rombalds Moor</td>
+        <td>(13:45)</td>
+    </tr>
+    <tr>
+        <td>21 Sep 2024</td>
+        <td>Arranging Orchids</td>
+        <td>(15:23)</td>
+    </tr>
+    <tr>
+        <td>21 Sep 2024</td>
+        <td>Dreaming by Theia</td>
+        <td>(13:42)</td>
+    </tr>
+    <tr>
+        <td>21 Sep 2024</td>
+        <td>Towards The End</td>
+        <td>(07:53)</td>
+    </tr>
+    <tr>
+        <td>02 Sep 2024</td>
+        <td>Live at St. George’s Hall</td>
+        <td>(11:41)</td>
+    </tr>
+    <tr>
+        <td>28 Jul 2024</td>
+        <td>Gendang Hujan</td>
+        <td>(13:38)</td>
+    </tr>
+    <tr>
+        <td>28 Jul 2024</td>
+        <td>Mega-City One</td>
+        <td>(09:17)</td>
+    </tr>
+    <tr>
+        <td>26 Jul 2024</td>
+        <td>Rapture</td>
+        <td>(14:52)</td>
+    </tr>
+    <tr>
+        <td>26 Jul 2024</td>
+        <td>Stasis Rains</td>
+        <td>(18:22)</td>
+    </tr>
+    <tr>
+        <td>23 Jul 2024</td>
+        <td>The Rising</td>
+        <td>(10:56)</td>
+    </tr>
+    <tr>
+        <td>14 Jul 2024</td>
+        <td>Temporal Flow</td>
+        <td>(10:07)</td>
+    </tr>
+</table>
+
 <h4 id="previous">Previous</h4>
-<p>12 Dec 2024 - Live at Theatre in the Mill reopening<br>29 Oct 2024 - Postponed Guests at NoiseUpstairs<br>27 Jul 2024 - Live at Edible Archives&#39; Drinking St George&#39;s Hall event for BD:Festival 2024<br>24 Feb 2024 - Live at Rewired Beats, North Parade organised by The Collector</p>
+<table class="tunes">
+    <tr>
+        <th class="date">DATE<div></div></th>
+        <th>EVENT<div></div></th>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>12 Dec 2024</td>
+        <td>Live at Theatre in the Mill reopening</td>
+    </tr>
+    <tr>
+        <td>29 Oct 2024</td>
+        <td>Live at The Noise Upstairs</td>
+    </tr>
+    <tr>
+        <td>27 Jul 2024</td>
+        <td>Live at Edible Archives' Drinking St George's Hall event for BD:Festival 2024</td>
+    </tr>
+    <tr>
+        <td>24 Feb 2024</td>
+        <td>Live at Rewired Beats, North Parade organised by The Collector</td>
+    </tr>
+</table>
+  
+ 
+ 
 
 </div></div>
 	</main>
