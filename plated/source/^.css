@@ -75,6 +75,8 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 
 table.tunes		{width:100%;}
 table.tunes	tr	{height:1em;}
+table.tunes	tr:hover td	{background-color:#ebe5f5;}
+table.tunes.old	tr:hover td	{background-color:transparent;}
 table.tunes th	{color:#666; font-size:14px; padding:0.5em 0 0.5em 0.5em; position:relative;}
 table.tunes th.date	{width:13em;}
 table.tunes th div	{position:absolute; pointer-events:none; border-bottom:1px solid #aaa; width:calc(100% - 1.5625em); bottom:0; left:0.5em;}
