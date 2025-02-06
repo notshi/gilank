@@ -72,13 +72,22 @@ G  i  l  a  n  k
         <li>
 			<div class="mob_cc_wrap">
 				<div class="mob_about">{about_text}</div>
-				<div class="mob_cc">Email | Bandcamp | Instagram</div>
+				<div class="mob_cc">{email} | {bandcamp} | {instagram}</div>
 			</div>
         </li>
         </ul>
     </nav>
 </div>
 </header>
+
+#^email trim=ends
+<a href="mailto:gilankmusic@gmail.com">Email</a>
+
+#^bandcamp trim=ends
+<a href="https://gilank.bandcamp.com/">Bandcamp</a>
+
+#^instagram trim=ends
+<a href="https://instagram.com/gilankmusic/">Instagram</a>
 
 #^about_text trim=ends form=markdown
 **Gilank** is a duo of Bradford-based experimental electro-acoustic musicians, *Alice Gilmour* and *shi Blank*.
@@ -102,7 +111,7 @@ Each responds to the other's input in real-time, their interactions shaping the 
         </div>
         <div class="cc_wrap">
             <div class="cc_text">
-                Email | Bandcamp | Instagram
+                {email} | {bandcamp} | {instagram}
             </div>
             <div class="top"><a href="#">Back up</a></div>
         </div>
