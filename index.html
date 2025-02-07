@@ -16,7 +16,8 @@ h3      {font-size:1.0em; font-weight:500; color:#111; letter-spacing:15px; text
 h4      {font-size:0.8em; font-style:italic; color:#111; letter-spacing:15px; text-transform:uppercase; margin-top:3em; margin-bottom:2em;}
 b		{font-weight:bold; font-weight:700;}
 i		{font-style:italic;}
-a		{color:#111; text-decoration:none; transition:all 0.5s ease-out;}
+a		{color:#1D2A35; text-decoration:none; transition:all 0.5s ease-out;}
+a:hover	{background-color:#efe9f9;}
 
 *:focus {outline:2px solid transparent;}
 *:focus:not(:focus-visible) {outline:2px solid transparent; box-shadow:none;}
@@ -48,6 +49,10 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 .logo a img     {width:50px; height:50px; padding-right:10px;}
 
 .title			{margin:1em 0; border-bottom:1px solid #111; padding-bottom:1em;}
+.blog_wrap		{margin:1.5em 0;}
+.blog_date		{margin-bottom:0.6em; font-size:14px;}
+.blog_data		{display:flex; margin-top:1em;}
+.blog_data img	{width:30%; margin-right:1em;}
 
 .about_wrap     {margin-top:1.5em; margin-bottom:1.5em; width:100%; background:#efe9f9; padding:1.5em;}
 .about_text     {font-size:18px; padding-top:20px; line-height:22px;}
@@ -86,7 +91,7 @@ table.tunes.old	tr:hover td	{background-color:transparent;}
 table.tunes th	{color:#666; font-size:14px; padding:0.5em 0 0.5em 0.5em; position:relative;}
 table.tunes th.date	{width:13em;}
 table.tunes th div	{position:absolute; pointer-events:none; border-bottom:1px solid #aaa; width:calc(100% - 1.5625em); bottom:0; left:0.5em;}
-table.tunes td	{vertical-align:top; padding:0.5em 0 0.5em 0.5em;}
+table.tunes td	{vertical-align:middle; padding:0.5em 0 0.5em 0.5em;}
 
 
 @media (min-width: 360px) and (max-width: 767.98px) {
@@ -106,8 +111,10 @@ h1				{font-size:1.5rem; line-height:inherit;}
 .funder_text    {padding:20px 0 0 0;}
 .cont_wrap p	{font-size:0.85rem;}
 table.tunes th.date 		{width:5em; padding-left:0;}
-table.tunes th.date div		{left:0;}
+table.tunes th.track 		{display:none;}
+table.tunes th.date div 	{left:0;}
 table.tunes td:first-of-type{padding-left:0;}
+table.tunes.current td:last-of-type {display:none;}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -121,8 +128,10 @@ h1, h2			{font-size:1.5rem; line-height:inherit;}
 .funder_text    {padding:20px 0 0 0;}
 .cont_wrap p	{font-size:0.85rem;}
 table.tunes th.date 		{width:5em; padding-left:0;}
+table.tunes th.track 		{display:none;}
 table.tunes th.date div 	{left:0;}
 table.tunes td:first-of-type{padding-left:0;}
+table.tunes.current td:last-of-type {display:none;}
 }
 
 </style>
@@ -185,12 +194,26 @@ table.tunes td:first-of-type{padding-left:0;}
 		<img src="./data/Gilank-1440x923.jpg"/>
 		<div class="link_wrap" id="news"><div class="cont_wrap">
 	<div class="title"><h3>news</h3></div>
-	We spent the day at Nave Studios with Ozzy Moysey and gang, improvising for a new album - sometime out this year, perhaps?!
+	<div class="blog_wrap">
+	<div class="blog_date">6.2.2025</div> 
+	Thankful to be included in Augustin Bousfield's Bradford City of Culture 2025 Playlist for BBC Radio 6 Music. Have a <a href="https://www.bbc.co.uk/programmes/m0027c39">listen</a>.
+	<div class="blog_data">
+		<img src="./data/gus_freakzone.jpg"/>
+	</div>
+</div>
+<div class="blog_wrap">
+	<div class="blog_date">24.1.2025</div>  
+	We spent the day at Nave Studios with Ozzy Moysey and the Leeds Improv Orchestra - new album sometime out this year, perhaps?!
+	<div class="blog_data">
+		<img src="./data/ozzy1.jpg"/><img src="./data/ozzy2.jpg"/><img src="./data/ozzy3.jpg"/>
+	</div>
+</div>
+
 </div></div>
 		<div class="link_wrap" id="releases"><div class="cont_wrap">
 	<div class="title"><h3>releases</h3></div>
 	<h4 id="upcoming">Upcoming</h4>
-<table class="tunes">
+<table class="tunes upcoming">
     <tr>
         <th class="date">DATE<div></div></th>
         <th>EVENT<div></div></th>
@@ -220,97 +243,114 @@ table.tunes td:first-of-type{padding-left:0;}
 </table>
 
 <h4 id="current">Current</h4>
-<table class="tunes old">
+<table class="tunes current old">
     <tr>
         <th class="date">DATE<div></div></th>
         <th>RELEASE TITLE<div></div></th>
         <th>LENGTH<div></div></th>
+        <th class="track">TRACK<div></div></th>
     </tr>
     <tr></tr>
     <tr>
         <td>07 Jan 2025</td>
         <td>Night Freight</td>
         <td>(15:35)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=3515038144/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/night-freight">Night Freight by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>18 Dec 2024</td>
         <td>Suspended in a Sunbeam</td>
         <td>(09:39)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=271980063/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/suspended-in-a-sunbeam">Suspended in a Sunbeam by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>29 Nov 2024</td>
         <td>There's a Strange Noise Coming Through the Speakers - Radio Edit</td>
         <td>(04:52)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=981807149/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/theres-a-strange-noise-coming-through-the-speakers-radio-edit">There&#39;s a Strange Noise Coming Through the Speakers - Radio Edit by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>29 Nov 2024</td>
         <td>Shiver Training</td>
         <td>(26:56)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=857848014/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/shiver-training">Shiver Training by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>21 Oct 2024</td>
         <td>There's a Strange Noise Coming Through the Speakers</td>
         <td>(10:45)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=117253470/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/theres-a-strange-noise-coming-through-the-speakers">There&#39;s a Strange Noise Coming Through the Speakers by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>21 Sep 2024</td>
         <td>The Occurrence at Rombalds Moor</td>
         <td>(13:45)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=4000231601/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/the-occurrence-at-rombalds-moor">The Occurrence at Rombalds Moor by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>21 Sep 2024</td>
         <td>Arranging Orchids</td>
         <td>(15:23)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1644382428/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/arranging-orchids">Arranging Orchids by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>21 Sep 2024</td>
         <td>Dreaming by Theia</td>
         <td>(13:42)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=2163960010/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/dreaming-by-theia">Dreaming by Theia by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>21 Sep 2024</td>
         <td>Towards The End</td>
         <td>(07:53)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=4109678439/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/towards-the-end">Towards The End by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>02 Sep 2024</td>
-        <td>Live at St. George’s Hall</td>
+        <td>Live at St George’s Hall</td>
         <td>(11:41)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=3137677078/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/live-at-st-georges-hall">Live at St George&#39;s Hall by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>28 Jul 2024</td>
         <td>Gendang Hujan</td>
         <td>(13:38)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=808614909/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/gendang-hujan">Gendang Hujan by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>28 Jul 2024</td>
         <td>Mega-City One</td>
         <td>(09:17)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=2064001120/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/mega-city-one">Mega-City One by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>26 Jul 2024</td>
         <td>Rapture</td>
         <td>(14:52)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1767764191/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/rapture">Rapture by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>26 Jul 2024</td>
         <td>Stasis Rains</td>
         <td>(18:22)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=1220079746/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/stasis-rains">Stasis Rains by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>23 Jul 2024</td>
         <td>The Rising</td>
         <td>(10:56)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=3134263271/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/the-rising">The Rising by Gilank</a></iframe></td>
     </tr>
     <tr>
         <td>14 Jul 2024</td>
         <td>Temporal Flow</td>
         <td>(10:07)</td>
+        <td><iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/track=3583322677/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://gilank.bandcamp.com/track/temporal-flow">Temporal Flow by Gilank</a></iframe></td>
     </tr>
 </table>
 
 <h4 id="previous">Previous</h4>
-<table class="tunes old">
+<table class="tunes previous old">
     <tr>
         <th class="date">DATE<div></div></th>
         <th>EVENT<div></div></th>
@@ -333,10 +373,6 @@ table.tunes td:first-of-type{padding-left:0;}
         <td>Live at Rewired Beats, North Parade organised by The Collector</td>
     </tr>
 </table>
-  
- 
- 
-
 </div></div>
 	</main>
 	<footer class="foot_content" id="about">
