@@ -44,9 +44,11 @@ input:focus-visible {outline:2px solid #918170; background-color:#fff; border-co
 
 .title			{margin:1em 0; border-bottom:1px solid #111; padding-bottom:1em;}
 .blog_wrap		{margin:1.5em 0;}
+.blog_wrap a	{color:#4d7799;}
 .blog_date		{margin-bottom:0.6em; font-size:14px;}
 .blog_data		{display:flex; margin-top:1em;}
 .blog_data img	{width:30%; margin-right:1em;}
+.blog_data a:hover	{background-color:transparent;}
 
 .about_wrap     {margin-top:1.5em; margin-bottom:1.5em; width:100%; background:#efe9f9; padding:1.5em;}
 .about_text     {font-size:18px; padding-top:20px; line-height:22px;}
