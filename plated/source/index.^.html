@@ -11,6 +11,7 @@ G  I  L  A  N  K
 	{mob_header}{header}
 	<main id="main" class="main_content row">
 		<img src="{_root}data/Gilank-1440x200-bw.png"/>
+		<div class="link_wrap" id="performances">{performances}</div>
 		<div class="link_wrap" id="news">{news}</div>
 		<div class="link_wrap" id="releases">{releases}</div>
 	</main>
@@ -80,7 +81,13 @@ G  I  L  A  N  K
 	{releases_text}
 </div>
 
-#^releases_text trim=ends form=markdown
+#^performances trim=ends
+<div class="cont_wrap">
+	<div class="title"><h3>performances</h3></div>
+	{performances_text}
+</div>
+
+#^performances_text trim=ends form=markdown
 
 #### Upcoming
 <table class="tunes upcoming">
@@ -110,17 +117,9 @@ G  I  L  A  N  K
 		<td>Undercliffe Cemetery with Eeshar Singh</td>
 		<td><a href="https://bradford2025.co.uk/event/the-bradford-progress-undercliffe-cemetery/">More info</a></td>
 	</tr>
-	<tr>
-		<td>26 Mar 2025</td>
-		<td>Gig for Gaza</td>
-		<td><a href="https://www.instagram.com/p/DHbT_9YoHFW/">Tickets</a></td>
-	</tr>
-	<tr>
-		<td>06 - 08 Mar 2025</td>
-		<td>A Teaspoon of Shampoo, Theatre in the Mill</td>
-		<td><a href="https://www.bradford.ac.uk/events/public/teaspoon-of-shampoo-.php">Tickets</a></td>
-	</tr>
 </table>
+
+#^releases_text trim=ends form=markdown
 
 #### Current
 <table class="tunes current old">
@@ -236,6 +235,14 @@ G  I  L  A  N  K
 		<th>EVENT<div></div></th>
 	</tr>
 	<tr></tr>
+	<tr>
+		<td>26 Mar 2025</td>
+		<td>Gig for Gaza ( <a href="https://www.instagram.com/p/DHbT_9YoHFW/"><i>More info</i></a> )</td>
+	</tr>
+	<tr>
+		<td>06 - 08 Mar 2025</td>
+		<td>A Teaspoon of Shampoo, Theatre in the Mill ( <a href="https://www.bradford.ac.uk/events/public/teaspoon-of-shampoo-.php"><i>More info</i></a> )</td>
+	</tr>
 	<tr>
 		<td>12 Dec 2024</td>
 		<td>Live at Theatre in the Mill reopening</td>
